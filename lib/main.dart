@@ -1,7 +1,5 @@
 import "package:basic_level_app/home_page.dart";
-import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
-import "package:flutter/services.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 
 void main() => runApp(const MyApp());
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(393, 830),
+      designSize: const Size(393, 830),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (BuildContext context, Widget? child) {
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               fontFamily: 'Open Sans',
             ),
-            home: HomePage(),
+            home: const HomePage(),
           ),
         );
       },

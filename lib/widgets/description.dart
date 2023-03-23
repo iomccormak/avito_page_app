@@ -20,24 +20,19 @@ class Description extends StatelessWidget {
             'Описание',
             style: TextStyle(
               color: AppColours.black,
-              fontWeight: FontWeight.w700,
               fontSize: 18.sp,
+              fontWeight: FontWeight.w600,
             ),
           ),
           SizedBox(
             height: 11.h,
           ),
-          Container(
-            width: ScreenUtil.defaultSize.width,
-            child: Expanded(
-              child: Text(
-                description,
-                style: TextStyle(
-                  color: AppColours.black,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
+          Text(
+            description,
+            style: TextStyle(
+              color: AppColours.black,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
             ),
           ),
           SizedBox(

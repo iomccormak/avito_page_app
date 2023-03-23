@@ -40,33 +40,40 @@ class _ShowImagesState extends State<ShowImages> {
               return buildImage(urlImage, index);
             },
           ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            padding: EdgeInsets.only(bottom: 10.h),
+          Opacity(
+            opacity: 0.6,
             child: Container(
-              width: 35.w,
-              height: 16.h,
-              padding: EdgeInsets.symmetric(vertical: 3.w, horizontal: 9.h),
-              decoration: BoxDecoration(
-                color: AppColours.black,
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Text(
-                "$_current / ${widget.urlImages.length}",
-                style: TextStyle(
-                  color: AppColours.white,
-                  fontSize: 9.sp,
+              alignment: Alignment.bottomCenter,
+              padding: EdgeInsets.only(bottom: 10.h),
+              child: Container(
+                width: 35.w,
+                height: 16.h,
+                padding: EdgeInsets.symmetric(vertical: 3.w, horizontal: 9.h),
+                decoration: BoxDecoration(
+                  color: AppColours.black,
+                  borderRadius: BorderRadius.circular(4),
                 ),
               ),
             ),
           ),
+          Container(
+            alignment: Alignment.bottomCenter,
+            padding: EdgeInsets.only(bottom: 11.h),
+            child: Text(
+              "$_current / ${widget.urlImages.length}",
+              style: TextStyle(
+                color: AppColours.white,
+                fontSize: 9.sp,
+              ),
+            ),
+          )
         ],
       ),
     );
   }
 
   Widget buildImage(String urlImage, int index) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Image.network(
         urlImage,

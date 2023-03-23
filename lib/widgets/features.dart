@@ -99,7 +99,7 @@ class Features extends StatelessWidget {
                 SizedBox(
                   width: 10.w,
                 ),
-                Container(
+                SizedBox(
                   width: 145.w,
                   child: Text(
                     'Высота потолков',
@@ -141,7 +141,7 @@ class Features extends StatelessWidget {
                 SizedBox(
                   width: 10.w,
                 ),
-                Container(
+                SizedBox(
                   width: 145.w,
                   child: Text(
                     'Ремонт',
@@ -170,7 +170,7 @@ class Features extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: 44.h,
             child: Row(
               children: [

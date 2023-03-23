@@ -21,7 +21,6 @@ class MainInfo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 12.h, bottom: 15.h, left: 16.w, right: 16.w),
       child: Column(
-        //mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -55,6 +54,8 @@ class MainInfo extends StatelessWidget {
             height: 10.h,
           ),
           Container(
+            width: 84.w,
+            height: 27.h,
             padding: EdgeInsets.only(
               left: 5.w,
               right: 5.w,
@@ -62,13 +63,27 @@ class MainInfo extends StatelessWidget {
               bottom: 4.h,
             ),
             color: AppColours.yellow,
-            child: Text(
-              price,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w600,
-              ),
+            child: Row(
+              children: [
+                Text(
+                  price,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                RichText(
+                  text: TextSpan(
+                    text: ' ₽',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
