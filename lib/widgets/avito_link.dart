@@ -27,14 +27,10 @@ class Link extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 16.h),
       alignment: Alignment.center,
       child: Container(
-        width: 190.w,
         height: 22.h,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColours.white,
-            elevation: 0,
-          ),
+        child: GestureDetector(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 AppImages.avitoImage,
@@ -54,7 +50,7 @@ class Link extends StatelessWidget {
               ),
             ],
           ),
-          onPressed: () {
+          onTap: () {
             _launchUrl(url);
           },
         ),
